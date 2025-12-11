@@ -1,0 +1,175 @@
+/* ==============================
+   VARIABLES
+============================== */
+:root {
+    --light-green: #c9f8ce;
+    --deep-green: #016f0e;
+    --mixed-green: #77dd77;
+}
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #016f0e;
+}
+
+.container {
+    width: 100%;
+}
+
+/* ==============================
+   HEADER / NAVBAR
+============================== */
+/* ==============================
+   HEADER / NAVBAR
+============================== */
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed; /* changed from absolute for sticky effect */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* higher to stay above content */
+    background-color: white; /* deep green semi-transparent */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    width: 95px;
+}
+
+/* Navbar desktop */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black; /* white works on deep green now */
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.navbar ul li :active {
+    color: #77dd77; /* mixed green highlight for active page */
+}
+
+.navbar ul li a:hover {
+    color: #c9f8ce; /* light green hover */
+}
+
+/* Header buttons */
+.header-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.join-btn,
+.donate-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.join-btn {
+    background-color: white;
+    border: 2px solid #016f0e;
+    color: #016f0e;
+}
+
+.join-btn:hover {
+    background-color: #016f0e;
+    color: white;
+}
+
+.donate-btn {
+    background-color: #016f0e;
+    color: white;
+}
+
+.donate-btn:hover {
+    background-color: #014f0b;
+}
+
+/* Hamburger menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: black; /* visible on green header */
+    cursor: pointer;
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: linear-gradient(135deg, var(--light-green), #e6ffe6, #ffffff);
+        text-align: center;
+        padding-top: 40px;
+        gap: 20px;
+        z-index: 9999;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li a {
+        color: var(--deep-green);
+        font-size: 18px;
+    }
+
+    .header-btns {
+        display: none;
+    }
+}
