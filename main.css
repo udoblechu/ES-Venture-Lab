@@ -190,7 +190,7 @@ header {
 }
 
 .section-content h1 {
-  font-family: 'SteelFish', sans-serif;
+  font-family: 'Steelfish', sans-serif;
   font-size: 100px;
   line-height: 1;
   font-weight: 400;
@@ -820,3 +820,4 @@ span {
     margin: 50px auto 30px auto;
   }
 }
+
