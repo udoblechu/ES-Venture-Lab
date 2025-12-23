@@ -1,0 +1,172 @@
+.hero-section{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.hero-text{
+    font-size: 7rem;
+    margin-bottom: 0;
+}
+.hero-img{
+    width: 50rem;
+}
+
+.testimonial-cards{
+    margin: 30px;
+    padding: 20px ;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 390px 390px 390px;
+
+    gap: 20px;
+}
+
+.grid-layout{
+    padding:10px ;
+    border: 2px solid #00590A;
+    border-radius: 40px;
+}
+.grid-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.profile{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 40px;
+    object-fit: contain;
+}
+.profile-name{
+    font-weight: 900;
+}
+.grid-content{
+    text-align: justify;
+    margin: 10px;
+    line-height: 1.5;
+    font-size: 10px;
+    font-weight: 600;
+
+}
+.rating{
+    margin-left:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: black; /* visible on green header */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: ;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+
+    }
+
+    .section-content h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-top: -170px;
+}
+
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        text-align: center;
+        padding-top: 40px;
+        gap: 20px;
+        z-index: 99999999 !important;  
+        transition: all 0.3s ease-in-out;
+    }
+
+    .header-btns {
+        display: none;
+    }
+
+
+
+    
+    /* HERO CARD FIX */
